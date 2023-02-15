@@ -2,9 +2,11 @@ package Inheritance.Interface;
 
 public interface Shape {
 		
-//public void Use() {
+	
+//public void Use() {0
 //	                                            cannot do this.
 //}
+	
 	public int FindArea();
 }
 interface color{
