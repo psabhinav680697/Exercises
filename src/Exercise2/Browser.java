@@ -1,5 +1,7 @@
 package Exercise2;
 
+import java.util.ArrayList;
+
 public class Browser {
 	public static Browser[] all=new Browser[20];
 	Browser(){
@@ -94,21 +96,31 @@ class GoogleChrome extends Browser{
 
 
 class Firefox extends Browser implements MultipleAccountContainers{
+	public static ArrayList<String> containers=new ArrayList<String>();
+	
+	Firefox(){
+		super();
+	}
+	
 		@Override
 		public void WhoAmI() {
 			System.out.println("I'm FIREFOX ");
 		}
-		Firefox(){
-			super();
-		}
+		
 		
 		@Override
-		
-		public void addContainer() {
+		public void addContainer(String container) {
+			containers.add(container);
 			
 		}
 		@Override
-		public void leaveContainer() {
+		public void leaveContainer(String container) {
+			for(String i:containers) {
+				if(i.equals(container)) {
+					containers.remove(i);
+					
+				}
+			}
 			
 		}
 		
