@@ -3,9 +3,8 @@ package Exercise1;
 public class Internet {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Browser chrome=new Browser();
+		String[] s = {"hii","loo"};
+		Browser chrome=new Browser(s);
 		chrome.addToHistory("www.youtube.com");
 		chrome.addToHistory("www.facebook.com");
 		chrome.getHistory();
